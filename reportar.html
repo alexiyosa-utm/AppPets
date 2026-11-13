@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema web de Control de Rescate y Adopción</title>
+</head>
+<body>  
+    <header>
+        <h1>SISTEMA WEB DE CONTROL DE RESCATE Y ADOPCIÓN</h1>
+        <p>Formulario de registro de emergencias y rescates</p>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIOS</a></li>
+                <li><a href="reportar.html">REPORTAR RESCATE</a></li>
+                <li><a href="rescates.html">CASOS REGISTRADOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Formulario -->
+    <main>
+        <section>
+            <h2>Ingreso de Rescate</h2>
+            <p>Por favor, complete los datos obligatorios para que el equipo de voluntarios y veterinarios.</p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Información General del Caso</legend>
+                    
+                    <p>
+                        <label for="tituloCaso">Título del caso o nombre provisional:</label><br>
+                        <input type="text" id="tituloCaso" name="tituloCaso" placeholder="Ej. Perro rescatado" required>
+                    </p>
+
+                    <p>
+                        <label for="categoria">Categoría / Especie:</label><br>
+                        <select id="categoria" name="categoria" required>
+                            <option value="">-- Seleccione una opción --</option>
+                            <option value="perros">Perros</option>
+                            <option value="gatos">Gatos</option>
+                            <option value="fauna_silvestre">Fauna Silvestre</option>
+                        </select>
+                    </p>
+
+                </fieldset>
+
+                <!-- Evaluación Inicial -->
+                <fieldset>
+                    <legend>Evaluación de Estado y Urgencia</legend>
+
+                    <p>
+                        <label>Nivel de Urgencia Médica:</label><br>
+                        <input type="radio" id="urgenciaAlta" name="urgencia" value="Alta" required>
+                        <label for="urgenciaAlta">Alta</label><br>
+                        
+                        <input type="radio" id="urgenciaMedia" name="urgencia" value="Media">
+                        <label for="urgenciaMedia">Media</label><br>
+
+                        <input type="radio" id="urgenciaBaja" name="urgencia" value="Baja">
+                        <label for="urgenciaBaja">Baja</label>
+                    </p>
+
+                    <p>
+                        <label for="descripcion">Descripción detallada del estado de hallazgo:</label><br>
+                        <textarea id="descripcion" name="descripcion" rows="5" cols="50" placeholder="Describa el estado de salud en el que se encontró..." required></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Enviar Alerta de Rescate</button>
+                    <button type="reset">Limpiar Formulario</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>Sistema de Control de Rescate y Adopción Animal.</p>
+        <p>Contacto de Emergencia: 099-000-0000</p>
+    </footer>
+    
+</body>
+</html>
